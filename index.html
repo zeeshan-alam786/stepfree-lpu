@@ -182,6 +182,20 @@ nav.top{background:transparent}nav.top a[aria-current=page]{color:#6CF0B5;border
 .dres{color:#C9D3F0}.pin{background:#1B2150;color:#EAF0FF;border-color:#8F9CFF;box-shadow:0 3px 0 #4C5BD4}.pin:hover,.pin[aria-pressed=true]{background:#FF7DB0;color:#3A0820}.homecap{background:rgba(14,16,48,.93);color:#EAF0FF}
 .hstrip a{background:#151A3A;border-color:#2B3260;color:#EAF0FF;box-shadow:0 4px 0 #232A5E}.hstrip a:hover{border-color:#8F9CFF}.hstrip p{color:#A9B4D6}
 .logincard{background:#151A3A;color:#EAF0FF;border:1px solid #2B3260}.logincard h2,.hlogo strong{color:#EAF0FF}.logincard .hl{color:#FF9A4D}.leb{color:#FF9A4D}.lsub{color:#C9D3F0}.htag{color:#A9B4D6}.loginwrap:before{background:linear-gradient(180deg,rgba(14,16,48,.78),rgba(14,16,48,.9))}
+</style><style id="fullscreen-fit-overrides">
+html,body{min-height:100%;width:100%}
+body{min-height:100dvh;display:flex;flex-direction:column;padding-bottom:0}
+main{width:min(100%,1440px);flex:1 0 auto;min-height:calc(100dvh - 78px);padding:clamp(22px,3.2vw,48px) clamp(18px,4vw,64px)}
+.view.on{min-height:calc(100dvh - 170px)}
+body.onhome main,body.onlogin main{width:100%;min-height:0}
+body.onhome .view.on,body.onlogin .view.on{min-height:0}
+.homehero{width:min(100%,1440px);min-height:calc(100dvh - 90px);margin:0 auto;padding:clamp(24px,4vw,64px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px)}
+.homecopy{max-width:620px}
+.homeimg{width:100%;max-width:680px;justify-self:end}
+footer{width:100%;max-width:1440px;margin:10px auto 0}
+@media(min-width:921px){main{max-width:none}.view.on{padding-bottom:clamp(20px,3vh,44px)}body:not(.onhome):not(.onlogin) main{padding-left:clamp(28px,5vw,88px);padding-right:clamp(28px,5vw,88px)}}
+@media(max-width:920px){main{min-height:calc(100dvh - 70px);padding:22px 18px 90px}.view.on{min-height:0}.homehero{min-height:calc(100dvh - 72px);grid-template-columns:1fr;grid-template-rows:auto minmax(180px,1fr) auto;padding:24px 20px 84px}.homeimg{width:min(100%,620px);justify-self:center;max-height:42dvh;object-fit:contain}.bnav{padding-bottom:env(safe-area-inset-bottom,0px)}}
+@media(max-height:620px) and (min-width:921px){.homehero{min-height:calc(100dvh - 72px);padding-top:20px;padding-bottom:20px}.homecopy .lead{display:block}.homeimg{max-height:70dvh;object-fit:contain}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="bar">
@@ -322,3 +336,4 @@ if(!matchMedia("(prefers-reduced-motion:reduce)").matches){hi.onmousemove=e=>{co
 $("#showp").onchange=e=>{$("#lp").type=e.target.checked?"text":"password"};
 route();
 </script></body></html>
+
